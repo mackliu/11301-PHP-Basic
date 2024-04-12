@@ -130,6 +130,48 @@ if($year%4 == 0 && $year%100!=0 || $year%400==0){
 
 
 ?>
+
+<h2>簡單迴圈練習</h2>
+<ul>
+    <li>1,3,5,7,9……n</li>
+    <li>10,20,30,40,50,60……n</li>
+    <li>3,5,7,11,13,17……97</li>
+</ul>
+<?php
+$n=100;
+for($i=1;$i<$n;$i=$i+2){
+    echo $i;
+    echo ",";
+}
+echo "<hr>";
+$n=25;
+for($i=1;$i<$n;$i++){
+    echo $i*10;
+    echo ",";
+}
+
+
+echo "<hr>";
+$count=0;
+
+for($i=3;$i<100;$i++){
+    $check=true;
+    for($j=2;$j<=sqrt($i);$j++){
+         if($i%$j==0){
+            $check=false;
+         }
+         $count++;
+    }
+    
+    if($check==true){
+        echo $i.",";
+    }
+    $count++;
+}
+
+echo "迴圈次數:".$count;
+
+?>
 <p>&nbsp</p>
 <p>&nbsp</p>
 <p>&nbsp</p>
