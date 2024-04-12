@@ -6,6 +6,7 @@
     <title>變數</title>
 </head>
 <body>
+    <a href="index.html">回首頁</a>
 <?php
 echo "ABC";
 
