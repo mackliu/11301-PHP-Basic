@@ -32,3 +32,38 @@ echo "<br>";
 echo "調整結果=".$score;
 
 ?>
+<h2>巢狀結構</h2>
+<?php
+$show=false;
+
+for($i=0 ; $i<10 ; $i++){
+    echo $i*10;
+ 
+    if($i>5 && $show=false){
+        echo "<br>";
+        echo "執行一半了...";
+        $show=true;
+    }
+    echo "<br>";
+}
+
+//if中只放變數的應用
+$a=true;
+if($a){
+    echo "TRUE";
+}else{
+    echo "FALSE";
+}
+?>
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
