@@ -8,9 +8,11 @@
 <body>
 <h1>九九乘法表-簡單</h1>
 <?php
+
 for($j=1;$j<=9;$j++){
 
     for($i=1;$i<=9;$i++){
+
         echo $j . " x " . $i . " = " . ($i*$j);
         echo " , ";
     }
@@ -19,5 +21,26 @@ for($j=1;$j<=9;$j++){
 
 
 ?>
+<h2>九九乘法表-表格</h2>
+<?php
+echo "<table>";
+for($j=1;$j<=9;$j++){
+    echo "<tr>";
+    for($i=1;$i<=9;$i++){
+        echo "<td>".$j . " x " . $i . " = " . ($i*$j)."</td>";
+    }
+    echo "</tr>";
+}
+echo "</table>";
+
+?>
+<style>
+    td{
+        border:1px solid black;
+    }
+</style>
+
+
+
 </body>
 </html>
