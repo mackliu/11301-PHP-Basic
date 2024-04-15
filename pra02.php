@@ -114,6 +114,32 @@ echo "</table>";
 
 ?>
 
+<h2>尋找字元(使用while)</h2>
+<ul>
+    <li>給定一個字串句子</li>
+    <li>給定一個單字或字母</li>
+    <li>尋找相符的內容</li>
+    <li>印出尋找到的單字或字母所在句子中的位置</li>
+</ul>
+<p>例:伊朗13日深夜起，朝以色列發射超過300架無人機及飛彈，最終只釀成以國輕微損失，甚至99％目標都遭到攔截。</p>
+<?php
+$str="伊朗13日深夜起，朝以色列發射超過300架無人機及飛彈，最終只釀成以國輕微損失，甚至99％目標都遭到攔截。";
+
+$target="以色列";
+$position=0;
+while($target!=mb_substr($str,$position,mb_strlen($target))){
+/*     echo "p=".$position;
+    echo ", substr = ". mb_substr($str,$position,mb_strlen($target));
+    echo "<br>"; */
+    $position=$position+1;
+
+}
+
+echo $target."的位置在".$position;
+echo "<br>";
+echo mb_strpos($str,$target)
+?>
+
 
 
 <p>&nbsp;</p>
