@@ -14,7 +14,7 @@
 <h2>直角三角形</h2>    
 
 <?php
-$stars=7;
+$stars=5;
 
 for($i=0;$i<$stars;$i++){
     for($j=0;$j<=$i;$j++){
@@ -44,6 +44,33 @@ for($i=0;$i<$stars;$i++){
     }
 
     for($j=0;$j<$i*2+1;$j++){
+        echo "*";
+    }
+    echo "<br>";
+}
+
+?>
+
+<h2>菱形</h2>    
+
+<?php
+for($i=0;$i<$stars;$i++){
+    for($k=0;$k<$stars-1-$i;$k++){
+        echo "&nbsp;";
+    }
+
+    for($j=0;$j<$i*2+1;$j++){
+        echo "*";
+    }
+    echo "<br>";
+}
+
+for($i=$stars-1;$i>0;$i--){
+    for($k=0;$k<$stars-$i;$k++){
+        echo "&nbsp;";
+    }
+
+    for($j=0;$j<$i*2-1;$j++){
         echo "*";
     }
     echo "<br>";
