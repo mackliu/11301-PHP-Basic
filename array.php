@@ -116,6 +116,33 @@ while(count($lotto)<6){
 
 echo join(",",$lotto);
 ?>
+
+<h2>找出五百年內的閏年</h2>
+
+<ul>
+    <li>請依照閏年公式找出五百年內的閏年</li>
+    <li>使用陣列來儲存閏年</li>
+    <li>使用迴圈來印出閏年</li>
+</ul>
+<?php
+$leaps=[];
+$year=2024;
+for($i=$year;$i<($year+500);$i++){
+    if($i%4 == 0 && $i%100!=0 || $i%400==0){
+        $leaps[]=$i;
+    }
+}
+
+echo "<h3>自$year 至".($year+500)."止，有以下閏年：</h3>";
+foreach($leaps as $leap){
+    echo $leap;
+    echo "<br>";
+}
+echo "<hr>";
+echo "共有".count($leaps)."個閏年"
+
+?>
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
