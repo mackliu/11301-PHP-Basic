@@ -67,6 +67,14 @@ foreach($ninenine as $nine ){
     }
     $i++;
 }
+echo "<hr>";
+
+foreach($ninenine as $idx => $nine ){
+    echo $nine;
+    if(($idx+1)%9==0){
+        echo "<br>";
+    }
+}
 
 ?>
 
