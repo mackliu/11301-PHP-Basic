@@ -40,5 +40,32 @@
     $b=explode(",",$tmp);
     print_r($b);
 ?>
+<h2>利用程式來產生陣列</h2>
+
+<ul>
+    <li>以迴圈的方式產生一個九九乘法表</li>
+    <li>將九九乘法表的每個項目以字串型式存入陣列中</li>
+    <li>再以迴圈方式將陣列內容印出</li>
+</ul>
+<?php
+$ninenine=[];
+for($i=1;$i<=9;$i++){
+    for($j=1;$j<=9;$j++){
+        //echo "$i x $j = ".($i*$j);
+        $ninenine[]="$i x $j = ".($i*$j);
+    }
+}
+echo "<pre>";
+print_r($ninenine);
+echo "</pre>";
+?>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 </body>
 </html>
