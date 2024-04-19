@@ -104,6 +104,26 @@ for($i=0;$i<$stars;$i++){
 
 
 ?>
+<h2>矩形含對角線</h2>  
+<?php
+    for($i=0;$i<7;$i++){
+        
+        for($j=0;$j<7;$j++){
+            if($i==0 || $i==6){
+                echo "*";
+            }else if($j==0 || $j==6 || $j==$i || $j==(6-$i)){
+                echo "*";
+            }else{
+                echo "&nbsp;";
+            }
+
+        }
+        echo "<br>";
+
+    }
+
+
+?>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
