@@ -68,13 +68,32 @@ foreach($ninenine as $nine ){
     $i++;
 }
 echo "<hr>";
-
-foreach($ninenine as $idx => $nine ){
-    echo $nine;
-    if(($idx+1)%9==0){
-        echo "<br>";
-    }
+?>
+<style>
+table{
+    border-collapse: collapse;
 }
+td{
+    border:1px solid gray;
+    padding:5px 10px;
+}
+</style>
+<?php
+echo "<table>";
+foreach($ninenine as $idx => $nine ){
+    
+    if($idx%9==0){
+        echo "<tr>";
+    }
+
+    echo "<td> $nine </td>";
+
+    if(($idx+1)%9==0){
+        echo "</tr>";
+    }
+
+}
+echo "</table>";
 
 ?>
 
