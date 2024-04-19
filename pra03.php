@@ -54,30 +54,23 @@ for($i=0;$i<$stars;$i++){
 <h2>菱形</h2>    
 
 <?php
-
 $odd=($stars%2==0)?$stars+1:$stars;
 $mid=(($odd+1)/2)-1;
-
-
 for($i=0;$i<$stars;$i++){
-
     if($i<=$mid){
         $tmp=$i;
     }else{
        // $tmp--;
         $tmp=$tmp-1;
     }
-
     for($k=0;$k<$mid-$tmp;$k++){
         echo "&nbsp;";
     }
-
     for($j=0;$j<$tmp*2+1;$j++){
         echo "*";
     }
     echo "<br>";
 }
-
 /* for($i=$stars-1;$i>0;$i--){
     for($k=0;$k<$stars-$i;$k++){
         echo "&nbsp;";
@@ -88,6 +81,27 @@ for($i=0;$i<$stars;$i++){
     }
     echo "<br>";
 } */
+
+?>
+
+<h2>矩形</h2>  
+<?php
+    for($i=0;$i<7;$i++){
+        
+        for($j=0;$j<7;$j++){
+            if($i==0 || $i==6){
+                echo "*";
+            }else if($j==0 || $j==6){
+                echo "*";
+            }else{
+                echo "&nbsp;";
+            }
+
+        }
+        echo "<br>";
+
+    }
+
 
 ?>
 <p>&nbsp;</p>
