@@ -55,9 +55,19 @@ for($i=1;$i<=9;$i++){
         $ninenine[]="$i x $j = ".($i*$j);
     }
 }
-echo "<pre>";
+/* echo "<pre>";
 print_r($ninenine);
-echo "</pre>";
+echo "</pre>"; */
+
+$i=1;
+foreach($ninenine as $nine ){
+    echo $nine;
+    if($i%9==0){
+        echo "<br>";
+    }
+    $i++;
+}
+
 ?>
 
 <p>&nbsp;</p>
