@@ -45,7 +45,23 @@ echo floor($diff/(60*60*24));
     <li>2021-10-5 12:09:05</li>
     <li>今天是西元2021年10月5日 上班日(或假日)</li>
 </ul>
+<?php 
+date_default_timezone_set('Asia/Taipei');
+echo date("Y/m/d");
+echo "<br>";
+echo date("m月j日 l");
+echo "<br>";
+echo date("Y-m-j H:i:s");
+echo "<br>";
+echo date("Y-m-j H:i:").(int)date("s");
+echo "<br>";
+$workday=(date("N")<6)?'工作日':'假日';
+echo "今天是西元".date("Y年m月j日 l")."是$workday";
+echo "<br>";
+echo "<br>";
 
+
+?>
 
 
 
