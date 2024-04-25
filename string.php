@@ -33,5 +33,17 @@ $s=str_repeat("*",mb_strlen($s));
 echo $s;
 
 ?>
-
+<h2>字串分割</h2>
+<ul>
+    <li>
+        將”this,is,a,book”依”,”切割後成為陣列
+    </li>
+</ul>
+<?php
+$s='this,is,a,book';
+$result=explode(",",$s);
+echo "<pre>";
+print_r($result);
+echo "</pre>";
+?>
 <hr>
