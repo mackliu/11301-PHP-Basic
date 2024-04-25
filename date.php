@@ -64,9 +64,6 @@ echo "<br>";
 ?>
 
 
-
-
-
 <h2>利用迴圈來計算連續五個周一的日期</h2>
 例:
 <ul>
@@ -76,7 +73,34 @@ echo "<br>";
     <li>2021-10-25 星期一</li>
     <li>2021-11-01 星期一</li>
 </ul>
+<?php
+$date='2024-04-25';
+$week=[
+    1=>'星期一',
+    2=>'星期二',
+    3=>'星期三',
+    4=>'星期四',
+    5=>'星期五',
+    6=>'星期六',
+    7=>'星期日',
+];
+for($i=0;$i<5;$i++){
+    $day=strtotime("+$i week",strtotime($date));
+    date("N");
+    echo date("Y-m-d ",$day);
+    echo $week[date("N",$day)];
+    echo "<br>";
+}
 
 
 
+?>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 
