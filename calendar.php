@@ -25,7 +25,10 @@
 </ul>
 
 <?php 
-$month=9;
+$month=4;
+$year=date("Y");
+echo "年".$year;
+echo "<BR>";
 echo "月份:".$month;
 echo "<br>";
 $firstDay=strtotime(date("Y-$month-1"));
@@ -54,12 +57,21 @@ echo "</tr>";
 for($i=0;$i<6;$i++){
     echo "<tr>";
     for($j=0;$j<7;$j++){
+        $date=$year.'-'.$month.'-'.$i*7+$j-($firstWeekStartDay-1);
         if($i==0 && $j>=$firstWeekStartDay ){
-            echo "<td>";
+            if(date("w",strtotime($date))==0 || date("w",strtotime($date))==6){
+                echo "<td style='background-color:pink'>";
+            }else{
+                echo "<td>";
+            }
             echo    $i*7+$j-($firstWeekStartDay-1);
             echo "</td>";
         }else if($i>0){
-            echo "<td>";
+            if(date("w",strtotime($date))==0 || date("w",strtotime($date))==6){
+                echo "<td style='background-color:pink'>";
+            }else{
+                echo "<td>";
+            }
             if($i*7+$j-($firstWeekStartDay-1)<=$days){
                 echo $i*7+$j-($firstWeekStartDay-1);
             }else{
