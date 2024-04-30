@@ -97,10 +97,9 @@ for($i=0;$i<6;$i++){
     echo "</tr>";
 }
 
-
-
-
 ?>
-   
+</table>
+<div style='display:inline-block;width:50px;height:50px;border:1px solid lightgreen'></div><div style='display:inline-block;width:50px;height:50px;border:1px solid lightgreen;border-left:0'></div><div style='margin-left:-1px;display:inline-block;width:50px;height:50px;border:1px solid lightgreen'></div><div style='display:inline-block;width:50px;height:50px;border:1px solid lightgreen'></div><div style='display:inline-block;width:50px;height:50px;border:1px solid lightgreen'></div><div style='display:inline-block;width:50px;height:50px;border:1px solid lightgreen'></div>
+
 </body>
 </html>
