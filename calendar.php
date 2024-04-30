@@ -101,7 +101,7 @@ for($i=0;$i<6;$i++){
 </table>
 <style>
 .block-table{
-    width:357px;
+    width:380px;
     display:flex;
     flex-wrap:wrap;
 }
@@ -111,7 +111,10 @@ for($i=0;$i<6;$i++){
     display:inline-block;
     width:50px;
     height:50px;
-    border:1px solid lightgreen; 
+    border:1px solid lightgreen;
+    position:relative;
+    transition: all 0.3s;
+    background:white;
 }
 .item-header{
     margin-left:-1px;
@@ -124,6 +127,22 @@ for($i=0;$i<6;$i++){
     background-color: darkgreen; 
     color:lightgreen
 }
+.item:hover{
+    background:yellow;
+    transform: scale(1.3);
+    font-weight:bold;
+    color:blue;
+    transition: all 0.3s;
+    z-index:10;
+
+}
+
+.holiday{
+    background:pink;
+}
+
+
+
 </style>
 <?php 
 
@@ -132,9 +151,9 @@ for($i=0;$i<42;$i++){
     $diff=$i-$firstWeekStartDay;
     $days[]=date("Y-m-d",strtotime("$diff days",$firstDay));
 }
-echo "<pre>";
+/* echo "<pre>";
 print_r($days);
-echo "</pre>";
+echo "</pre>"; */
 echo "<div class='block-table'>";
 echo "<div class='item-header'>日</div>";
 echo "<div class='item-header'>一</div>";
@@ -148,18 +167,17 @@ foreach($days as $day){
     $w=date("w",strtotime($day));
     if($w==0 || $w==6){
 
-        echo "<div class='item' style='background:pink'>$format</div>";
+        echo "<div class='item holiday'>$format</div>";
     }else{
 
-        echo "<div class='item'>$format</div>";
+        echo "<div class='item'>";
+        echo "<div class='date'>$format</div>";
+        echo "</div>";
     }
 }
 echo "</div>";
 
-
-
 ?>
-
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
