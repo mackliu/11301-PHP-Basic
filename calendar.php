@@ -99,7 +99,72 @@ for($i=0;$i<6;$i++){
 
 ?>
 </table>
-<div style='display:inline-block;width:50px;height:50px;border:1px solid lightgreen'></div><div style='display:inline-block;width:50px;height:50px;border:1px solid lightgreen;border-left:0'></div><div style='margin-left:-1px;display:inline-block;width:50px;height:50px;border:1px solid lightgreen'></div><div style='display:inline-block;width:50px;height:50px;border:1px solid lightgreen'></div><div style='display:inline-block;width:50px;height:50px;border:1px solid lightgreen'></div><div style='display:inline-block;width:50px;height:50px;border:1px solid lightgreen'></div>
+<style>
+.block-table{
+    width:357px;
+    display:flex;
+    flex-wrap:wrap;
+}
+.item{
+    margin-left:-1px;
+    margin-top:-1px;
+    display:inline-block;
+    width:50px;
+    height:50px;
+    border:1px solid lightgreen; 
+}
+</style>
+<?php 
 
+$month=4;
+$year=date("Y");
+echo "年".$year;
+echo "<BR>";
+echo "月份:".$month;
+echo "<br>";
+$firstDay=strtotime(date("Y-$month-1"));
+$firstWeekStartDay=date("w",$firstDay);
+echo "第一周的開始是第".$firstWeekStartDay."日";
+$days=date("t",$firstDay);
+$lastDay=strtotime(date("Y-$month-$days"));
+echo "<br>";
+echo "最後一天是".date("Y-m-d",$lastDay);
+
+$birthday='1974-4-1';
+$today=date("Y-m-d");
+$days=[];
+for($i=0;$i<42;$i++){
+    $days[]=date("d",strtotime("+$i days",strtotime($today)));
+}
+/* echo "<pre>";
+print_r($days);
+echo "</pre>"; */
+echo "<div class='block-table'>";
+echo "<div class='item'>日</div>";
+echo "<div class='item'>一</div>";
+echo "<div class='item'>二</div>";
+echo "<div class='item'>三</div>";
+echo "<div class='item'>四</div>";
+echo "<div class='item'>五</div>";
+echo "<div class='item'>六</div>";
+foreach($days as $day){
+
+    echo "<div class='item'>$day</div>";
+
+}
+echo "</div>";
+
+
+
+?>
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 </body>
 </html>
